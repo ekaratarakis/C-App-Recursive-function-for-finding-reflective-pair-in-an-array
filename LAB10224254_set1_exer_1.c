@@ -10,7 +10,7 @@ int find_Reflective_Pair(int array[],int x,int numberOfElements);
 
 int main()
 {
-	system("PAUSE");
+    system("PAUSE");
     char choice='y';
     do // "do while" for iterative use of this app
     {
@@ -19,7 +19,7 @@ int main()
     	printf("Please, give me a number of inputs that you want: ");
     	scanf("%d",&numberOfElements); // reading the user's choice
 	
-		// dynamic memory allocation using malloc function
+	// dynamic memory allocation using malloc function
     	int *matrix = malloc(numberOfElements*sizeof(int));
     
     	// the user will be asked to enter the numbers he wants
