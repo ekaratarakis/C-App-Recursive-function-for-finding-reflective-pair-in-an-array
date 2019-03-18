@@ -53,8 +53,7 @@ int main()
 	
 	    /***********************************************
 	    CALLING RECURSIVE FUNCTION INSIDE MAIN & 
-	    PRINTING THE 1ST ELEMENT OF THE REFLECTIVE 
-	    PAIR
+	    PRINTING THE 1ST ELEMENT OF THE REFLECTIVE PAIR
 	    ************************************************/
 		
 	    printf("\nPosition of first element of reflective pair with ideal sum is = %d\n",find_Reflective_Pair(matrix,0,numberOfElements)); 
