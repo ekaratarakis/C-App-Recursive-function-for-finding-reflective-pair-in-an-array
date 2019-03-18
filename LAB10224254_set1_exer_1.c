@@ -88,12 +88,12 @@ int find_Reflective_Pair(int array[],int x,int numberOfElements) // recursive fu
 		}
 		else
 		{ // Case 2 : Reflective pair didn't found
-            return find_Reflective_Pair(array,x+1,numberOfElements);
+            		return find_Reflective_Pair(array,x+1,numberOfElements);
 		}
 	}
 	else
 	{     // Case 3 : There was no reflective pair in the array
-            printf("No ideal reflective pair was found. Sorry!!!\n");
+            	printf("No ideal reflective pair was found. Sorry!!!\n");
 	     	return -1;	
 	}
 } /////END OF find_Reflective_Pair/////	
