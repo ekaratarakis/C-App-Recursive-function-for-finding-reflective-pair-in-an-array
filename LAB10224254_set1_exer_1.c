@@ -25,49 +25,48 @@ int main()
     	// the user will be asked to enter the numbers he wants
     	printf("\nPlease start entering %d numbers:\n",numberOfElements);
     
-	    for(i=0;i<numberOfElements;i++) // inserting the elements that the user enters to the array
-	    {
-	    	printf("\nPlease enter input number %d:",i+1);
+	for(i=0;i<numberOfElements;i++) // inserting the elements that the user enters to the array
+	{
+		printf("\nPlease enter input number %d:",i+1);
 	    	scanf("%d",&number);    	
 	    	matrix[i]=number;
-		}
+	}
 	
-		/********************************/
-		/*******PRINTING THE ARRAY*******/
-		/********************************/
+	/********************************/
+	/*******PRINTING THE ARRAY*******/
+	/********************************/
 	
-		printf("\nThe following list includes the integers that you entered\n[");
-		for(i=0;i<numberOfElements;i++)
+	printf("\nThe following list includes the integers that you entered\n[");
+	for(i=0;i<numberOfElements;i++)
+	{
+		if(i!=(numberOfElements-1))
 		{
-			if(i!=(numberOfElements-1))
-			{
-				printf("%d ",matrix[i]);
-			}
-			else
-			{
-				printf("%d",matrix[i]);
-			}
+			printf("%d ",matrix[i]);
 		}
-		printf("]\n");
-		system("\nPAUSE");
+		else
+		{
+			printf("%d",matrix[i]);
+		}
+	}
+	printf("]\n");
+	system("\nPAUSE");
 	
-		/***********************************************
-		 CALLING RECURSIVE FUNCTION INSIDE MAIN & 
-		 PRINTING THE 1ST ELEMENT OF THE REFLECTIVE 
-		 PAIR
-		************************************************/
+	/***********************************************
+	 CALLING RECURSIVE FUNCTION INSIDE MAIN & 
+	 PRINTING THE 1ST ELEMENT OF THE REFLECTIVE PAIR
+	************************************************/
 		
-		printf("\nPosition of first element of reflective pair with ideal sum is = %d\n",find_Reflective_Pair(matrix,0,numberOfElements)); 
-		system("\nPAUSE");
-	    printf("\nDo you want to re-run the program?\nPress y/Y for yes, or anything else to terminate.\n"); // asking the user for relaunching the program
-	    choice=getch(); // reading the user's answer
-	    if (choice=='y' || choice=='Y')
-	    {
-	        free(matrix); // free allocated memory 
-	    	system("cls");
-		}
-	}while (choice=='Y' || choice=='y');
-	return 0;   	
+	printf("\nPosition of first element of reflective pair with ideal sum is = %d\n",find_Reflective_Pair(matrix,0,numberOfElements)); 
+	system("\nPAUSE");
+	printf("\nDo you want to re-run the program?\nPress y/Y for yes, or anything else to terminate.\n"); // asking the user for relaunching the program
+	choice=getch(); // reading the user's answer
+	if (choice=='y' || choice=='Y')
+	{
+		free(matrix); // free allocated memory 
+	  	system("cls");
+	}
+     }while (choice=='Y' || choice=='y');
+     return 0;   	
 }
 /////////////////////////////
 ////////END OF MAIN//////////
